@@ -1,0 +1,268 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    animation: gradient 10s ease infinite;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #000398, #23d5ab);
+    background-size: 400% 400%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#Header {
+    text-align: center;
+}
+
+#Logo{
+    color: #FFD700;
+    font-family: "Comic Sans MS";
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+#LogoSearch {
+    font-family: "Segoe UI";
+    font-size: 20pt;
+    margin-right: 5px;
+    text-align: center;
+}
+
+#ChoiceStatus {
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px #FFD700 solid;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFD700;
+    column-fill: auto;
+    -moz-column-fill: auto;
+    font-family: "Comic Sans MS";
+    font-size: 14pt;
+    font-weight: bold;
+    list-style: none;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 220px;
+}
+
+#ChoiceStatus option {
+    background-color: #000064;
+    text-align: center;
+}
+
+#ChoiceBase {
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px #FFD700 solid;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFD700;
+    column-fill: auto;
+    -moz-column-fill: auto;
+    font-family: "Comic Sans MS";
+    font-size: 14pt;
+    font-weight: bold;
+    list-style: none;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 150px;
+}
+
+#ChoiceBase option{
+    background-color: #000064;
+    text-align: center;
+}
+
+#Statistics {
+    border: 2px #FFD700 solid;
+    border-radius: 15px;
+    color: #FFD700;
+    font-family: "Comic Sans MS";
+    font-size: 14pt;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#StatisticsFind, 
+#StatisticsVAK, 
+#StatisticsRSCI {
+    color: #FFD700;
+    font-family: "Comic Sans MS";
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.Database {
+    border: 1px solid #000000;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.Database th,
+.Database tr,
+.Database td {
+    border: 1px solid #000000;
+    font-family: "Segoe UI";
+    font-size: 12pt;
+    padding: 3px;
+    text-align: center;
+}
+
+.Database a,
+.Database a:active,
+.Database a:link,
+.Database a:visited,
+.Database a:hover {
+	color: #0000AA;
+    text-decoration: none;
+}
+
+.Title {
+    background-color: #DCDCDC;
+    border: 1px solid #000000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Subtitle td {
+    border: none;
+}
+
+.Search {
+    border: 1px solid #FFFF00;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px #FFFF8C;
+    font-family: "Segoe UI";
+    font-size: 11pt;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    outline: none;
+    text-align: center;
+}
+
+#SearchId,
+#SearchAuthor,
+#SearchType,
+#SearchName,
+#SearchPlace,
+#SearchBase,
+#SearchDate,
+#SearchPages {
+    width: 90%;
+}
+
+.GetBiblio {
+    background-color: transparent;
+    background-image: url("Data/File.png") no-repeat;
+    border: none;
+    color: #FF0000;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top: 10px;
+    outline: none;
+    text-align: center;
+    width: 24px;
+}
+
+.GetFile,
+.GetFile a,
+.GetFile a:active,
+.GetFile a:hover,
+.GetFile a:link,
+.GetFile a:visited {
+    background-color: transparent;
+    background-image: url("Data/File.png") no-repeat;
+    border: none;
+    color: #FF0000;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top: 10px;
+    outline: none;
+    text-align: center;
+    width: 24px;
+}
+
+.Id {
+    font-weight: bold;
+    width: 80px;
+}
+
+.Author {
+    width: 160px;
+}
+
+.Type {
+    width: 160px;
+}
+
+.Name {
+    width: 350px;
+}
+
+.Place {
+    width: 350px;
+}
+
+.Base {
+    width: 60px;
+}
+
+.Date {
+    width: 60px;
+}
+
+.Pages {
+    width: 60px;
+    font-weight: bold;
+}
+
+.Biblio {
+    display: none;
+}
+
+.CloseBiblio {
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: .875rem;
+    font-weight: 300;
+    border-radius: 100%;
+    background-color: #47BDFF;
+    z-index: 4;
+    color: #fff;
+    line-height: 3rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+.P0 {
+    background-color: #C6E0B4;
+}
+.P1 {
+    background-color: #A6E395;
+}
+.P2 {
+    background-color: #C4E59F;
+}
