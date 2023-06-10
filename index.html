@@ -8,7 +8,7 @@
         <meta http-equiv="pragma" content="no-cache">
         <title>Маркелов В.К. - База данных публикаций</title>
     </head>
-    <body onload="SearchPubls('Name')">
+    <body onload="SearchPubls()">
         <div id="Header">
             <center>
 		<span id="LogoSearch">🔍</span>
@@ -16,13 +16,13 @@
                 <span id="LogoSearch">🔍</span>
 	    </center>
             <br>
-            <select id="ChoiceStatus" onchange="SearchStatus();" onfocus="this.blur();">
+            <select id="ChoiceStatus" onchange="SearchPubls();" onfocus="this.blur();">
                 <option value="ALL">ВСЕ ПУБЛИКАЦИИ</option>
                 <option value="P0">ОПУБЛИКОВАНО</option>
                 <option value="P1">В БАЗЕ ДАННЫХ</option>
                 <option value="P2">НЕ В БАЗЕ ДАННЫХ</option>
             </select>
-            <select id="ChoiceBase" onchange="SearchBase();" onfocus="this.blur();">
+            <select id="ChoiceBase" onchange="SearchPubls();" onfocus="this.blur();">
                 <option value="ALL">ВСЕ БАЗЫ</option>
                 <option value="DB1">БАЗА ВАК</option>
                 <option value="DB2">БАЗА РИНЦ</option>
