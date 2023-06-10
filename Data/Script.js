@@ -44,126 +44,59 @@ function ShowStat(count_find, count_vak, count_rsci) {
 }
 
 // Функция поиска по различным критериям
-function SearchPubls(argument) {
-
-	let found_result;
-
-	let search_request;
-	let search_row;
+function SearchPubls() {
 
 	let count_find = 0;
 	let count_vak = 0;
 	let count_rsci = 0;
 
-	if (argument == "ID") {
-		search_request = new RegExp(SEARCH_ID.value, 'i');
-		search_row = 0;
-	} else if (argument == "Author") {
-		search_request = new RegExp(SEARCH_AUTHOR.value, 'i');
-		search_row = 1;
-	} else if (argument == "Type") {
-		search_request = new RegExp(SEARCH_TYPE.value, 'i');
-		search_row = 2;
-	} else if (argument == "Name") {
-		search_request = new RegExp(SEARCH_NAME.value, 'i');
-		search_row = 3;
-	} else if (argument == "Place") {
-		search_request = new RegExp(SEARCH_PLACE.value, 'i');
-		search_row = 4;
-	} else if (argument == "Base") {
-		search_request = new RegExp(SEARCH_BASE.value, 'i');
-		search_row = 5;
-	} else if (argument == "Date") {
-		search_request = new RegExp(SEARCH_DATE.value, 'i');
-		search_row = 6;
-	} else if (argument == "Pages") {
-		search_request = new RegExp(SEARCH_PAGES.value, 'i');
-		search_row = 7;
-	} else {
-		search_request = new RegExp(SEARCH_NAME.value, 'i');
-		search_row = 3;
-	}
-
 	for (let PUB_NOTE of PUBLS) {
-		found_result = false;
-		if (search_row == 0) {
-			found_cell = PUB_NOTE.getElementsByTagName("td")[0].innerHTML.slice(0, 5);
-		} else {
-			found_cell = PUB_NOTE.getElementsByTagName("td")[search_row].innerHTML;
-		}
-		found_result = search_request.test(found_cell);
-		if ((found_result) & ((PUB_NOTE.className.slice(4, 6) == PUBLS_STATUS.value) || (PUB_NOTE.className.slice(7, 9) == PUBLS_STATUS.value) || (PUBLS_STATUS.value == "ALL")) & ((PUB_NOTE.className.slice(7, 10) == PUBLS_BASE.value) || (PUB_NOTE.className.slice(11, 14) == PUBLS_BASE.value) || (PUB_NOTE.className.slice(10, 13) == PUBLS_BASE.value) || (PUB_NOTE.className.slice(14, 17) == PUBLS_BASE.value) || (PUBLS_BASE.value == "ALL"))) {
-			PUB_NOTE.style.display = "";
-			count_find = count_find + 1;
-			if ((PUB_NOTE.className.slice(7, 10) == "DB1") || (PUB_NOTE.className.slice(11, 14) == "DB1") || (PUB_NOTE.className.slice(10, 13) == "DB1") || (PUB_NOTE.className.slice(14, 17) == "DB1")) {
-				count_vak = count_vak + 1;
-			}
-			if ((PUB_NOTE.className.slice(7, 10) == "DB2") || (PUB_NOTE.className.slice(11, 14) == "DB2") || (PUB_NOTE.className.slice(10, 13) == "DB2") || (PUB_NOTE.className.slice(14, 17) == "DB2")) {
-				count_rsci = count_rsci + 1;
-			}
-		} else {
-			PUB_NOTE.style.display = "none";
-		}
-	}
 
-	for (SEARCH_INPUT of SEARCH) {
-		if (SEARCH_INPUT.className.slice(7) != argument) {
-			SEARCH_INPUT.value = "";
+		const CELL_TEXT_ID =  PUB_NOTE.getElementsByTagName("td")[0].innerHTML.slice(0, 5);
+		const CELL_TEXT_AUTHOR = PUB_NOTE.getElementsByTagName("td")[1].innerHTML;
+		const CELL_TEXT_TYPE = PUB_NOTE.getElementsByTagName("td")[2].innerHTML;
+		const CELL_TEXT_NAME = PUB_NOTE.getElementsByTagName("td")[3].innerHTML;
+		const CELL_TEXT_PLACE = PUB_NOTE.getElementsByTagName("td")[4].innerHTML;
+		const CELL_TEXT_BASE = PUB_NOTE.getElementsByTagName("td")[5].innerHTML;
+		const CELL_TEXT_DATE = PUB_NOTE.getElementsByTagName("td")[6].innerHTML;
+		const CELL_TEXT_PAGES = PUB_NOTE.getElementsByTagName("td")[7].innerHTML.slice(0, 3);
+
+		const REQUEST_ID = new RegExp(SEARCH_ID.value, 'i').test(CELL_TEXT_ID);
+		const REQUEST_AUTHOR = new RegExp(SEARCH_AUTHOR.value, 'i').test(CELL_TEXT_AUTHOR);
+		const REQUEST_TYPE = new RegExp(SEARCH_TYPE.value, 'i').test(CELL_TEXT_TYPE);
+		const REQUEST_NAME = new RegExp(SEARCH_NAME.value, 'i').test(CELL_TEXT_NAME);
+		const REQUEST_PLACE = new RegExp(SEARCH_PLACE.value, 'i').test(CELL_TEXT_PLACE);
+		const REQUEST_BASE = new RegExp(SEARCH_BASE.value, 'i').test(CELL_TEXT_BASE);
+		const REQUEST_DATE = new RegExp(SEARCH_DATE.value, 'i').test(CELL_TEXT_DATE);
+		const REQUEST_PAGES = new RegExp(SEARCH_PAGES.value, 'i').test(CELL_TEXT_PAGES);
+
+		PUB_NOTE.style.display = "none";
+
+		if (REQUEST_ID && REQUEST_AUTHOR && REQUEST_TYPE && REQUEST_NAME && REQUEST_PLACE && REQUEST_BASE && REQUEST_DATE && REQUEST_PAGES) {
+			
+			if (PUB_NOTE.className.slice(4, 6) == PUBLS_STATUS.value || PUB_NOTE.className.slice(7, 9) == PUBLS_STATUS.value || PUBLS_STATUS.value == "ALL")  {
+				
+				if (PUB_NOTE.className.slice(7, 10) == PUBLS_BASE.value || PUB_NOTE.className.slice(11, 14) == PUBLS_BASE.value || PUB_NOTE.className.slice(10, 13) == PUBLS_BASE.value || PUB_NOTE.className.slice(14, 17) == PUBLS_BASE.value || PUBLS_BASE.value == "ALL") {
+					
+					PUB_NOTE.style.display = "";
+					count_find = count_find + 1;
+					
+					if ((PUB_NOTE.className.slice(7, 10) == "DB1") || (PUB_NOTE.className.slice(11, 14) == "DB1") || (PUB_NOTE.className.slice(10, 13) == "DB1") || (PUB_NOTE.className.slice(14, 17) == "DB1")) {
+						count_vak = count_vak + 1;
+					}
+					
+					if ((PUB_NOTE.className.slice(7, 10) == "DB2") || (PUB_NOTE.className.slice(11, 14) == "DB2") || (PUB_NOTE.className.slice(10, 13) == "DB2") || (PUB_NOTE.className.slice(14, 17) == "DB2")) {
+						count_rsci = count_rsci + 1;
+					}
+
+				}
+
+			}
+
 		}
-	}
 
 	ShowStat(count_find, count_vak, count_rsci);
 
-}
-
-// Функция поиска по статусу публикации
-function SearchStatus() {
-	
-	let count_find = 0;
-	let count_vak = 0;
-	let count_rsci = 0;
-
-	for (let PUB_NOTE of PUBLS) {
-		if (((PUB_NOTE.className.slice(4, 6) == PUBLS_STATUS.value) || (PUB_NOTE.className.slice(7, 9) == PUBLS_STATUS.value) || (PUBLS_STATUS.value == "ALL")) & ((PUB_NOTE.className.slice(7, 10) == PUBLS_BASE.value) || (PUB_NOTE.className.slice(11, 14) == PUBLS_BASE.value) || (PUB_NOTE.className.slice(10, 13) == PUBLS_BASE.value) || (PUB_NOTE.className.slice(14, 17) == PUBLS_BASE.value) || (PUBLS_BASE.value == "ALL"))) {
-			PUB_NOTE.style.display = "";
-			count_find = count_find + 1;
-			if ((PUB_NOTE.className.slice(7, 10) == "DB1") || (PUB_NOTE.className.slice(11, 14) == "DB1") || (PUB_NOTE.className.slice(10, 13) == "DB1") || (PUB_NOTE.className.slice(14, 17) == "DB1")) {
-				count_vak = count_vak + 1;
-			}
-			if ((PUB_NOTE.className.slice(7, 10) == "DB2") || (PUB_NOTE.className.slice(11, 14) == "DB2") || (PUB_NOTE.className.slice(10, 13) == "DB2") || (PUB_NOTE.className.slice(14, 17) == "DB2")) {
-				count_rsci = count_rsci + 1;
-			}
-		} else {
-			PUB_NOTE.style.display = "none";
-		}
-	}
-
-	ShowStat(count_find, count_vak, count_rsci);
-
-}
-
-// Функция поиска по базе данных публикации
-function SearchBase() {
-	
-	let count_find = 0;
-	let count_vak = 0;
-	let count_rsci = 0;
-
-	for (let PUB_NOTE of PUBLS) {
-		if (((PUB_NOTE.className.slice(4, 6) == PUBLS_STATUS.value) || (PUB_NOTE.className.slice(7, 9) == PUBLS_STATUS.value) || (PUBLS_STATUS.value == "ALL")) & ((PUB_NOTE.className.slice(7, 10) == PUBLS_BASE.value) || (PUB_NOTE.className.slice(11, 14) == PUBLS_BASE.value) || (PUB_NOTE.className.slice(10, 13) == PUBLS_BASE.value) || (PUB_NOTE.className.slice(14, 17) == PUBLS_BASE.value) || (PUBLS_BASE.value == "ALL"))) {
-			PUB_NOTE.style.display = "";
-			count_find = count_find + 1;
-			if ((PUB_NOTE.className.slice(7, 10) == "DB1") || (PUB_NOTE.className.slice(11, 14) == "DB1") || (PUB_NOTE.className.slice(10, 13) == "DB1") || (PUB_NOTE.className.slice(14, 17) == "DB1")) {
-				count_vak = count_vak + 1;
-			}
-			if ((PUB_NOTE.className.slice(7, 10) == "DB2") || (PUB_NOTE.className.slice(11, 14) == "DB2") || (PUB_NOTE.className.slice(10, 13) == "DB2") || (PUB_NOTE.className.slice(14, 17) == "DB2")) {
-				count_rsci = count_rsci + 1;
-			}
-		} else {
-			PUB_NOTE.style.display = "none";
-		}
-	}
-
-	ShowStat(count_find, count_vak, count_rsci);
+    }
 
 }
