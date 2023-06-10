@@ -5,7 +5,7 @@ html {
 
 body {
     animation: gradient 10s ease infinite;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #000398, #23d5ab);
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #000398, #23D5AB);
     background-size: 400% 400%;
 }
 
@@ -26,7 +26,7 @@ body {
 }
 
 #Logo{
-    color: #FFD700;
+    color: #FFD700CF;
     font-family: "Comic Sans MS";
     font-size: 18pt;
     font-weight: bold;
@@ -42,11 +42,11 @@ body {
 
 #ChoiceStatus {
     appearance: none;
-    background-color: rgba(255, 255, 255, 0);
-    border: 2px #FFD700 solid;
+    background-color: #FFFFFF00;
+    border: 2px #FFD700DF solid;
     border-radius: 15px;
     box-sizing: border-box;
-    color: #FFD700;
+    color: #FFD700CF;
     column-fill: auto;
     -moz-column-fill: auto;
     font-family: "Comic Sans MS";
@@ -60,17 +60,17 @@ body {
 }
 
 #ChoiceStatus option {
-    background-color: #000064;
+    background-color: #000064CF;
     text-align: center;
 }
 
 #ChoiceBase {
     appearance: none;
-    background-color: rgba(255, 255, 255, 0);
-    border: 2px #FFD700 solid;
+    background-color: #FFFFFF00;
+    border: 2px #FFD700DF solid;
     border-radius: 15px;
     box-sizing: border-box;
-    color: #FFD700;
+    color: #FFD700CF;
     column-fill: auto;
     -moz-column-fill: auto;
     font-family: "Comic Sans MS";
@@ -84,14 +84,14 @@ body {
 }
 
 #ChoiceBase option{
-    background-color: #000064;
+    background-color: #000064CF;
     text-align: center;
 }
 
 #Statistics {
-    border: 2px #FFD700 solid;
+    border: 2px #FFD700DF solid;
     border-radius: 15px;
-    color: #FFD700;
+    color: #FFD700CF;
     font-family: "Comic Sans MS";
     font-size: 14pt;
     font-weight: bold;
@@ -101,14 +101,14 @@ body {
 #StatisticsFind, 
 #StatisticsVAK, 
 #StatisticsRSCI {
-    color: #FFD700;
+    color: #FFD700CF;
     font-family: "Comic Sans MS";
     font-size: 14pt;
     font-weight: bold;
 }
 
 .Database {
-    border: 1px solid #000000;
+    border: 1px solid #000000CF;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -120,7 +120,7 @@ body {
 .Database th,
 .Database tr,
 .Database td {
-    border: 1px solid #000000;
+    border: 1px solid #000000CF;
     font-family: "Segoe UI";
     font-size: 12pt;
     padding: 3px;
@@ -137,8 +137,8 @@ body {
 }
 
 .Title {
-    background-color: #DCDCDC;
-    border: 1px solid #000000;
+    background-color: #DCDCDCCF;
+    border: 1px solid #000000CF;
     text-align: center;
     font-weight: bold;
 }
@@ -148,9 +148,9 @@ body {
 }
 
 .Search {
-    border: 1px solid #FFFF00;
+    border: 1px solid #FFFF00CF;
     border-radius: 20px;
-    box-shadow: 1px 1px 1px 1px #FFFF8C;
+    box-shadow: 1px 1px 1px 1px #FFFF8CCF;
     font-family: "Segoe UI";
     font-size: 11pt;
     margin-top: 3px;
@@ -174,7 +174,7 @@ body {
     background-color: transparent;
     background-image: url("Data/File.png") no-repeat;
     border: none;
-    color: #FF0000;
+    color: #FF0000CF;
     font-size: 16pt;
     font-weight: bold;
     margin-top: 10px;
@@ -192,7 +192,7 @@ body {
     background-color: transparent;
     background-image: url("Data/File.png") no-repeat;
     border: none;
-    color: #FF0000;
+    color: #FF0000CF;
     font-size: 16pt;
     font-weight: bold;
     margin-top: 10px;
@@ -240,11 +240,42 @@ body {
 }
 
 .P0 {
-    background-color: #C6E0B4;
+    background-color: #C6E0B4CF;
 }
+
 .P1 {
-    background-color: #A6E395;
+    background-color: #A6E395CF;
 }
+
 .P2 {
-    background-color: #C4E59F;
+    background-color: #C4E59FCF;
+}
+
+.R1 {
+    background-color: #FFD966CF;
+}
+
+.R2 {
+    background-color: #FFE699CF;
+}
+
+.W1 {
+    background-color: #F4B084CF;
+}
+
+.W2 {
+    background-color: #F8CBADCF;
+}
+
+.Footer {
+    background-color: #DCDCDCCF;
+    border-radius: 15px;
+    font-family: "Comic Sans MS";
+    font-size: 21px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 15px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
 }
