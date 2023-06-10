@@ -26,7 +26,7 @@ body {
 }
 
 #Logo{
-    color: #FFD700CF;
+    color: #FFD700DA;
     font-family: "Comic Sans MS";
     font-size: 18pt;
     font-weight: bold;
@@ -43,10 +43,10 @@ body {
 #ChoiceStatus {
     appearance: none;
     background-color: #FFFFFF00;
-    border: 2px #FFD700DF solid;
+    border: 2px #FFD700DA solid;
     border-radius: 15px;
     box-sizing: border-box;
-    color: #FFD700CF;
+    color: #FFD700DA;
     column-fill: auto;
     -moz-column-fill: auto;
     font-family: "Comic Sans MS";
@@ -60,17 +60,17 @@ body {
 }
 
 #ChoiceStatus option {
-    background-color: #000064CF;
+    background-color: #000064DA;
     text-align: center;
 }
 
 #ChoiceBase {
     appearance: none;
     background-color: #FFFFFF00;
-    border: 2px #FFD700DF solid;
+    border: 2px #FFD700DA solid;
     border-radius: 15px;
     box-sizing: border-box;
-    color: #FFD700CF;
+    color: #FFD700DA;
     column-fill: auto;
     -moz-column-fill: auto;
     font-family: "Comic Sans MS";
@@ -84,14 +84,14 @@ body {
 }
 
 #ChoiceBase option{
-    background-color: #000064CF;
+    background-color: #000064DA;
     text-align: center;
 }
 
 #Statistics {
-    border: 2px #FFD700DF solid;
+    border: 2px #FFD700DA solid;
     border-radius: 15px;
-    color: #FFD700CF;
+    color: #FFD700DA;
     font-family: "Comic Sans MS";
     font-size: 14pt;
     font-weight: bold;
@@ -101,14 +101,14 @@ body {
 #StatisticsFind, 
 #StatisticsVAK, 
 #StatisticsRSCI {
-    color: #FFD700CF;
+    color: #FFD700DA;
     font-family: "Comic Sans MS";
     font-size: 14pt;
     font-weight: bold;
 }
 
 .Database {
-    border: 1px solid #000000CF;
+    border: 1px solid #000000DA;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -120,7 +120,7 @@ body {
 .Database th,
 .Database tr,
 .Database td {
-    border: 1px solid #000000CF;
+    border: 1px solid #000000DA;
     font-family: "Segoe UI";
     font-size: 12pt;
     padding: 3px;
@@ -137,8 +137,8 @@ body {
 }
 
 .Title {
-    background-color: #DCDCDCCF;
-    border: 1px solid #000000CF;
+    background-color: #DCDCDCDA;
+    border: 1px solid #000000DA;
     text-align: center;
     font-weight: bold;
 }
@@ -148,9 +148,9 @@ body {
 }
 
 .Search {
-    border: 1px solid #FFFF00CF;
+    border: 1px solid #FFFF00DA;
     border-radius: 20px;
-    box-shadow: 1px 1px 1px 1px #FFFF8CCF;
+    box-shadow: 1px 1px 1px 1px #FFFF8CDA;
     font-family: "Segoe UI";
     font-size: 11pt;
     margin-top: 3px;
@@ -174,7 +174,7 @@ body {
     background-color: transparent;
     background-image: url("Data/File.png") no-repeat;
     border: none;
-    color: #FF0000CF;
+    color: #FF0000DA;
     font-size: 16pt;
     font-weight: bold;
     margin-top: 10px;
@@ -192,7 +192,7 @@ body {
     background-color: transparent;
     background-image: url("Data/File.png") no-repeat;
     border: none;
-    color: #FF0000CF;
+    color: #FF0000DA;
     font-size: 16pt;
     font-weight: bold;
     margin-top: 10px;
@@ -240,35 +240,35 @@ body {
 }
 
 .P0 {
-    background-color: #C6E0B4CF;
+    background-color: #C6E0B4DA;
 }
 
 .P1 {
-    background-color: #A6E395CF;
+    background-color: #A6E395DA;
 }
 
 .P2 {
-    background-color: #C4E59FCF;
+    background-color: #C4E59FDA;
 }
 
 .R1 {
-    background-color: #FFD966CF;
+    background-color: #FFD966DA;
 }
 
 .R2 {
-    background-color: #FFE699CF;
+    background-color: #FFE699DA;
 }
 
 .W1 {
-    background-color: #F4B084CF;
+    background-color: #F4B084DA;
 }
 
 .W2 {
-    background-color: #F8CBADCF;
+    background-color: #F8CBADDA;
 }
 
 .Footer {
-    background-color: #DCDCDCCF;
+    background-color: #DCDCDCDA;
     border-radius: 15px;
     font-family: "Comic Sans MS";
     font-size: 21px;
