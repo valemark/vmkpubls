@@ -6,6 +6,7 @@ html {
 body {
     animation: gradient 10s ease infinite;
     background: linear-gradient(-45deg, #EE7752, #E73C7E, #000398, #23D5AB);
+    background-attachment: fixed;
     background-size: 400% 400%;
 }
 
@@ -239,10 +240,6 @@ body {
     display: none;
 }
 
-.P0 {
-    background-color: #C6E0B4DA;
-}
-
 .P1 {
     background-color: #A6E395DA;
 }
@@ -265,6 +262,14 @@ body {
 
 .W2 {
     background-color: #F8CBADDA;
+}
+
+.DB {
+    opacity: 1.0;
+}
+
+.NODB:not(.NONE) {
+    opacity: 0.85;
 }
 
 .Footer {
