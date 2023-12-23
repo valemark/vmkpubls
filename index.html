@@ -13,32 +13,32 @@
 	    <title>База данных публикаций | Маркелов В.К.</title>
     </head>
     <body onload="SearchPubls()">
-        <div id="Header">
-            <center>
-		<span id="LogoSearch">🔍</span>
-		<span id="Logo">БАЗА ДАННЫХ ПУБЛИКАЦИЙ (ОТ 23.12.2023) | МАРКЕЛОВ В.К.</span>
-                <span id="LogoSearch">🔍</span>
-	    </center>
-            <br>
-            <select id="ChoiceStatus" onchange="SearchPubls();" onfocus="this.blur();">
-                <option value="ALL">ВСЕ ПУБЛИКАЦИИ</option>
-                <option value="P1">В БАЗЕ ДАННЫХ</option>
-                <option value="P2">ОПУБЛИКОВАНО</option>
-            </select>
-            <select id="ChoiceBase" onchange="SearchPubls();" onfocus="this.blur();">
-                <option value="ALL">ВСЕ БАЗЫ</option>
-                <option value="HACJ">БАЗА ВАК</option>
-                <option value="RSCI">БАЗА РИНЦ</option>
-                <option value="OTHER">ДРУГИЕ БАЗЫ</option>
-                <option value="NONE">БЕЗ БАЗЫ</option>
-            </select>
-            <span id="Statistics">
-                <span id ="StatisticsFIND"></span>
-                <span id ="StatisticsHACJ"></span>
-                <span id ="StatisticsRSCI"></span>
-            </span>
-        </div>
-	<table align="center" class="Database" cellspacing="0">
+	    <div id="Header">
+		<center>
+			<span id="LogoSearch">🔍</span>
+			<span id="Logo">БАЗА ДАННЫХ ПУБЛИКАЦИЙ (ОТ 23.12.2023) | МАРКЕЛОВ В.К.</span>
+			<span id="LogoSearch">🔍</span>
+		</center>
+		<br>
+		<select id="ChoiceStatus" onchange="SearchPubls();" onfocus="this.blur();">
+			<option value="ALL">ВСЕ ПУБЛИКАЦИИ</option>
+			<option value="P1">В БАЗЕ ДАННЫХ</option>
+			<option value="P2">ОПУБЛИКОВАНО</option>
+		</select>
+		    <select id="ChoiceBase" onchange="SearchPubls();" onfocus="this.blur();">
+			    <option value="ALL">ВСЕ БАЗЫ</option>
+			    <option value="HACJ">БАЗА ВАК</option>
+			    <option value="RSCI">БАЗА РИНЦ</option>
+			    <option value="OTHER">ДРУГИЕ БАЗЫ</option>
+			    <option value="NONE">БЕЗ БАЗЫ</option>
+		    </select>
+		    <span id="Statistics">
+			    <span id ="StatisticsFIND"></span>
+			    <span id ="StatisticsHACJ"></span>
+			    <span id ="StatisticsRSCI"></span>
+		    </span>
+	    </div>
+	    <table align="center" class="Database" cellspacing="0">
             <thead>
                 <tr class="Title">
                     <td class="Id">ID</td>
