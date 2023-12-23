@@ -93,7 +93,7 @@ function SearchPubls() {
 
 		if (REQUEST_ID && REQUEST_AUTHOR && REQUEST_TYPE && REQUEST_NAME && REQUEST_PLACE && REQUEST_BASE && REQUEST_DATE && REQUEST_PAGES) {
 
-                    if (ArrayCheck(PUBLS_STATUS.value, PUB_CLASSES) && ArrayCheck(PUBLS_BASE.value, PUB_CLASSES)) {
+            if (ArrayCheck(PUBLS_STATUS.value, PUB_CLASSES) && ArrayCheck(PUBLS_BASE.value, PUB_CLASSES)) {
 
 				PUB_LINE.style.display = "";
 				count_find = count_find + 1;
